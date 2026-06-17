@@ -1,2 +1,110 @@
-<!-- insert your HTML code here -->
-<!-- don't forget to make two other HTML documents also -->
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Mahdi Tech Solutions</title>
+
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script defer src="https://unpkg.com/alpinejs"></script>
+
+<link rel="stylesheet" href="css/custom.css">
+
+
+</head>
+
+<body>
+<div class="max-w-6xl mx-auto px-4">
+
+<nav x-data="{ open: false }" class="bg-[#2563eb] text-white p-4">
+
+
+<div class="flex justify-between items-center">
+
+    <a href="professional_site.html" class="font-bold text-[28px]">
+        Mahdi IT Solutions
+    </a>
+
+    <button
+        @click="open = !open"
+        class="md:hidden bg-white text-black px-2 py-1 rounded-[8px]">
+        ☰
+    </button>
+
+    <div class="hidden md:flex gap-4">
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+    </div>
+
+</div>
+
+<div x-show="open" class="flex flex-col mt-2 md:hidden">
+    <a href="services.html">Services</a>
+    <a href="contact.html">Contact</a>
+</div>
+
+
+</nav>
+
+<h1 class="text-4xl text-center mt-8">
+    Welcome to Mahdi IT Solutions
+</h1>
+
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-8">
+
+
+<div class="bg-blue-100 p-4 rounded">
+    Website Development
+</div>
+
+<div class="bg-green-100 p-4 rounded">
+    Programming
+</div>
+
+<div class="bg-yellow-100 p-4 rounded">
+    IT Support
+</div>
+
+</div>
+
+<div
+x-data="{
+images:[
+'images/developer-8829717_960_720.jpg',
+'images/un-4984799_1280.jpg',
+'images/home_wireframe.png'
+],
+current:0
+}"
+class="mt-10 text-center">
+
+
+<img
+:src="images[current]"
+alt="Carousel"
+class="mx-auto w-[500px] h-auto">
+
+<div class="mt-4">
+
+    <button
+    @click="current=(current-1+images.length)%images.length"
+    class="bg-blue-500 text-white px-4 py-2">
+        Previous
+    </button>
+
+    <button
+    @click="current=(current+1)%images.length"
+    class="bg-blue-500 text-white px-4 py-2">
+        Next
+    </button>
+
+</div>
+
+
+</div>
+
+</div>
+</body>
+</html>
+

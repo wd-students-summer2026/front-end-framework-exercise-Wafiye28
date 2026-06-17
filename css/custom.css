@@ -1,0 +1,11 @@
+.hero-title {
+    letter-spacing: 2px;
+}
+
+.custom-card {
+    border: 2px solid black;
+}
+
+.custom-footer {
+    text-align: center;
+}

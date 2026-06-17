@@ -1,0 +1,31 @@
+.container {
+width: 960px;
+max-width: 100%;
+margin: 0 auto;
+}
+
+header,
+footer {
+width: 100%;
+text-align: center;
+padding: 10px;
+clear: both;
+}
+
+.column1,
+.column2 {
+float: left;
+width: 50%;
+box-sizing: border-box;
+}
+
+.column3 {
+clear: both;
+width: 100%;
+box-sizing: border-box;
+}
+
+img {
+max-width: 100%;
+height: auto;
+}

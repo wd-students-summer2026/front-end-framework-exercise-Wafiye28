@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Contact</title>
+
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script defer src="https://unpkg.com/alpinejs"></script>
+
+<link rel="stylesheet" href="css/custom.css">
+
+</head>
+
+<body>
+<div class="max-w-6xl mx-auto px-4">
+
+<nav x-data="{ open: false }" class="bg-[#2563eb] text-white p-4">
+
+
+<div class="flex justify-between items-center">
+
+    <a href="professional_site.html" class="font-bold">
+        Mahdi Tech Solutions
+    </a>
+
+    <button @click="open=!open" class="md:hidden bg-white text-black px-2 py-1">
+        ☰
+    </button>
+
+    <div class="hidden md:flex gap-4">
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+    </div>
+
+</div>
+
+<div x-show="open" class="flex flex-col mt-2 md:hidden">
+    <a href="services.html">Services</a>
+    <a href="contact.html">Contact</a>
+</div>
+
+
+</nav>
+
+<h1 class="text-4xl text-center mt-8">Contact Us</h1>
+
+<p class="text-center mt-4">
+    Email: mhm6547@nyu.edu
+</p>
+
+</div>
+</body>
+</html>
